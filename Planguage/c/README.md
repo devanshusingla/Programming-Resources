@@ -7,3 +7,6 @@ awesome way to initialise structures and arrays in C.
 
 4. [typcasting structure pointer](https://stackoverflow.com/questions/3766229/casting-one-struct-pointer-to-another-c)
 way to typecast a structure pointer to another structure pointer
+
+5. [Libcrypt](https://www.gnupg.org/documentation/manuals/gcrypt/index.html#SEC_Contents)
+this library provides cryptographic tools.
