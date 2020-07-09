@@ -1,0 +1,38 @@
+#!/bin/bash
+
+#############################################################
+#   Author: Devanshu Singla
+#   Email Id: devanshu803.singla@gmail.com
+#############################################################
+
+CACHE_FOLDER=$HOME/.cache/set-venv
+GET_PIP_FILE=$CACHE_FOLDER/get-pip.py
+
+# Checks if get-pip.py is downloaded.
+mkdir -p $CACHE_FOLDER
+if [ ! -f "$GET_PIP_FILE" ];
+then
+    curl https://bootstrap.pypa.io/get-pip.py > $GET_PIP_FILE
+fi
+
+# Checks for python executable.
+if [ -z $1 ]
+then
+    if command -v python3 >> /dev/null;
+    then PYTHON=python3;
+    else PYTHON=python;
+    fi
+else
+    PYTHON=$1
+fi
+echo $PYTHON
+
+# Main program setting up venv environment.
+$PYTHON -m venv .venv --without-pip
+source .venv/bin/activate
+cat $GET_PIP_FILE | $PYTHON
+deactivate
+
+# creating alias for activate.
+echo "alias activate=\". ${PWD}/.venv/bin/activate\"" > .venvrc
+. .venvrc
