@@ -8,3 +8,6 @@ Very well explained material on dynamic programming.
 
 ### 2. [Junior training sheet v7.0](https://docs.google.com/spreadsheets/d/1iJZWP2nS_OB3kCTjq8L6TrJJ4o-5lhxDOyTaocSYc-k/edit#gid=84654839)
 Good sheet with cp problems arranged according to difficulty and concepts.
+
+## [Algorithms](algos)
+* KMP Algorithm
