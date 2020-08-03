@@ -11,3 +11,6 @@ Good sheet with cp problems arranged according to difficulty and concepts.
 
 ## [Algorithms](algos)
 * KMP Algorithm
+
+## [Questions for Practice](questions)
+* Dynamic Programming
